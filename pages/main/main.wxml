@@ -1,0 +1,49 @@
+<!--pages/main/main.wxml-->
+
+<view class="main">
+    {{ name }}'s Test wxapp
+</view>
+
+<!-- 迷你清单 -->
+<view class="miniList">
+    <text class="mini-title">Mini List</text>
+    <input value="{{val}}" bindinput="handleInput" placeholder="Please input List"></input>
+    <button bindtap="addTodo">Add</button>
+</view>
+
+<view wx:for="{{todos}}">
+    <view> {{ item }} </view>
+</view>
+
+
+<!-- camera 展示 -->
+<!--
+device-position: 前置 or 后置
+flash: 闪光灯
+
+-->
+<!-- <camera 
+    mode="normal"
+    device-position="back"
+    flash="off"
+    style="width: 100%; height: 300px;"
+>
+</camera> -->
+
+<!-- 截图 -->
+<camera
+    mode="normal"
+    style="width: 100%; height: 300px;"
+>
+</camera>
+<button type="primary" bindtap="takePhoto">Take Photo</button>
+<image src="{{src}}"></image>
+
+
+<!-- 地图 -->
+<!-- map.wxml -->
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+
+
+<!-- 弹窗 API -->
+ <button type="primary" bindtap="toast">Try Window</button>

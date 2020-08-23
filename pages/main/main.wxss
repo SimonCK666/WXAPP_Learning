@@ -1,0 +1,18 @@
+/* pages/main/main.wxss */
+
+.main {
+    padding-left: 200rpx;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: red;
+}
+
+.mini-List input{
+    padding-left: 250rpx;
+}
+
+.mini-title {
+    font-size: 20px;
+    padding-left: 300rpx;
+    padding-bottom: 30px;
+}
